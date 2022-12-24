@@ -4,15 +4,19 @@ return(<div><h1>{props.name}</h1></div>)
 
 const Content = (props) => {
   return(<div>
-          <p>{props.p1} {props.n1}</p>
-          <p>{props.p2} {props.n2}</p>
-          <p>{props.p3} {props.n3}</p>
+          <Part part={props.p1} number = {props.n1}/>
+          <Part part={props.p2} number = {props.n2}/>
+          <Part part={props.p3} number = {props.n3}/>
         </div>)
   }
 
 const Total = (props) => {
   return(<div><p>Number of exercises {props.n1 + props.n2 + props.n3}</p></div>)
   } 
+
+const Part = (props) => {
+return(<div><p>{props.part} {props.number}</p></div>)
+}
 
 const App = () => {
   const course = 'Half Stack application development'
